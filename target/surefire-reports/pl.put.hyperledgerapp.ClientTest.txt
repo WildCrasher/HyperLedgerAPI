@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: pl.put.hyperledgerapp.ClientTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.471 s <<< FAILURE! - in pl.put.hyperledgerapp.ClientTest
+testFabCar  Time elapsed: 0.47 s  <<< ERROR!
+java.io.FileNotFoundException: ../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml (No such file or directory)
+	at pl.put.hyperledgerapp.ClientTest.testFabCar(ClientTest.java:15)
+
