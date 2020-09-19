@@ -48,16 +48,13 @@ public class Issue {
       // Connect to gateway using application specified parameters
       try(Gateway gateway = builder.connect()) {
 
-        // Access PaperNet network
         System.out.println("Use network channel: mychannel.");
         Network network = gateway.getNetwork("mychannel");
 
-        // Get addressability to commercial paper contract
         System.out.println("Use pl.poznan.put.thesis smart contract.");
         Contract contract = network.getContract(contractName, "pl.poznan.put.thesis");
 
-        // Issue commercial paper
-        System.out.println("Submit commercial paper issue transaction.");
+        System.out.println("Submit thesis issue transaction.");
         byte[] response = contract.submitTransaction("issue", "promotor1", "1", "2020-09-19", "temat");
 
         System.out.println(response);

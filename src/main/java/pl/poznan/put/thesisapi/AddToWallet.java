@@ -50,7 +50,7 @@ public class AddToWallet {
       X509Certificate certificate = readX509Certificate(certificatePath);
       PrivateKey privateKey = getPrivateKey(privateKeyPath);
 
-      Identity identity = Identities.newX509Identity("Supervisors2MSP", certificate, privateKey);
+      Identity identity = Identities.newX509Identity("SupervisorsMSP", certificate, privateKey);
 
 
       String identityLabel = "User1@supervisors.put.poznan.pl";
