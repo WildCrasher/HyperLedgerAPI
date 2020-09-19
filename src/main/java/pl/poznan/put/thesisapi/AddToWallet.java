@@ -39,13 +39,13 @@ public class AddToWallet {
       Path walletPath = Paths.get(".", "wallet");
       Wallet wallet = Wallets.newFileSystemWallet(walletPath);
 
-      Path credentialPath = Paths.get(".","users", "User1@supervisors.put.poznan.pl", "msp");
+      Path credentialPath = Paths.get(".","users", "Admin@supervisors.put.poznan.pl", "msp");
       System.out.println("credentialPath: " + credentialPath.toString());
       Path certificatePath = credentialPath.resolve(Paths.get("signcerts",
-          "User1@supervisors.put.poznan.pl-cert.pem"));
+          "cert.pem"));
       System.out.println("certificatePem: " + certificatePath.toString());
       Path privateKeyPath = credentialPath.resolve(Paths.get("keystore",
-          "priv_sk"));
+          "73fedf9968ffec82b622a8360c229d88bf1142ba41cfbf4f1b4462eb02b0a69e_sk"));
 
       X509Certificate certificate = readX509Certificate(certificatePath);
       PrivateKey privateKey = getPrivateKey(privateKeyPath);
@@ -53,7 +53,7 @@ public class AddToWallet {
       Identity identity = Identities.newX509Identity("SupervisorsMSP", certificate, privateKey);
 
 
-      String identityLabel = "User1@supervisors.put.poznan.pl";
+      String identityLabel = "Admin@supervisors.put.poznan.pl";
       wallet.put(identityLabel, identity);
 
       System.out.println("Write wallet info into " + walletPath.toString() + " successfully.");

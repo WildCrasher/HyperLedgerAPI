@@ -38,7 +38,7 @@ public class Issue {
       Wallet wallet = Wallets.newFileSystemWallet(walletPath);
       System.out.println("Read wallet info from: " + walletPath.toString());
 
-      String userName = "User1@supervisors.put.poznan.pl";
+      String userName = "Admin@supervisors.put.poznan.pl";
 
       Path connectionProfile = Paths.get(".",  "gateway", "connection-supervisors.yaml");
 
