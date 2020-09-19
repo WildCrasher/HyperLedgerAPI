@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hyper-ledger-app" />
+        <module name="thesis-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="hyper-ledger-app" target="1.8" />
+      <module name="thesis-api" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="hyper-ledger-app" options="" />
+      <module name="thesis-api" options="-parameters" />
     </option>
   </component>
 </project>
